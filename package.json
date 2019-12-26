@@ -1,0 +1,46 @@
+{
+  "name": "flexite",
+  "private": true,
+  "version": "0.0.0",
+  "description": "This is a library for create flexible site",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">= 12"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lerna": "lerna",
+    "tsc": "lerna run tsc --no-private",
+    "clean": "rm -rf ./lib",
+    "babel": "babel src --out-dir lib --ignore 'src/**/*.spec.js'",
+    "babel:watch": "watch 'yarn babel' ./src",
+    "build": "yarn clean && yarn babel",
+    "lint": "eslint src",
+    "test": "jest --coverage --config config/jest.config.js",
+    "test:watch": "watch 'yarn test' ./src"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^3.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flexite/flexite.git"
+  },
+  "keywords": [
+    "blog",
+    "node",
+    "react"
+  ],
+  "author": "Cao Xiaoqi<xqcao@xqcao.com>",
+  "contributors": [
+    "Xiaoqi Cao"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flexite/flexite/issues"
+  },
+  "homepage": "https://github.com/flexite/flexite#readme"
+}
